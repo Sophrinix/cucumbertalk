@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Cucumber, and why Titanium?</title>
+
+		<meta name="description" content="Cucumber and why titanium / hyperloop needs it.">
+		<meta name="author" content="Codex Labs">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>TiCucumber & Calabash </h2>
+					
+					<p>
+						<small><img src="img/twitter-actual-background.jpg"> <a href="https://www.codexlabs.com/‎">Codex Labs</a> / <a href="http://twitter.com/CodexLabs">@CodexLabs</a></small>
+					</p>
+				</section>
+				<section>
+					<h2><a href="http://www.sarahmei.com/blog/2010/05/29/outside-in-bdd/">What is BDD?</a></h2>
+				</section>
+				<section>
+					<h2> outside-in BDD (what & why)</h2>
+					<a href="http://www.sarahmei.com/blog/2010/05/29/outside-in-bdd/">http://www.sarahmei.com/blog/2010/05/29/outside-in-bdd/</a>
+				</section>
+					
+				<section>
+					<h2>Also, Jenkins integration.</h2>
+					<p>https://github.com/masterthought/jenkins-cucumber-jvm-reports-plugin</p>
+					<small> I am trying to javascript all the things... even if ruby is a great lang</small>
+				</section>
+				<section>
+					<img src="img/cucumber.png">
+				</section>
+				<section>
+					<h2>What is: </h2>
+					<img src="img/calabash.png">
+					
+				</section>	
+				<section>
+					<h2>the architecture</h2>
+					<a href="http://blog.lesspainful.com/2012/03/07/Calabash-iOS/">http://blog.lesspainful.com/2012/03/07/Calabash-iOS/</a>
+					<img src="img/calabash-ios.png">
+				</section>	
+				<section>
+					<h2>What is TiCucumber?</h2>
+					<a href="https://vimeo.com/75164235">https://vimeo.com/75164235</a>
+				</section>	
+				<section>
+					<h2>The Plan.</h2>
+						<p>aka wrap calabash and use opalrb to handle ruby dependencies</p>
+				</section>		
+				<section>
+					<h2>What I discussed in Atlanta</h2>
+						<p>	https://www.eventbrite.com/e/ticucumber-workshop-tickets-7789670113</p>
+				</section>
+			
+			    <section>
+					<h3>that time I started writing ti cucumber and then saw chris barbers' talk ...</h3>
+					<a href="http://www.slideshare.net/cb1kenobi/titanium-cli-32-ti-appcamp2-1122013"><img src="img/slide-1-638.jpg"></a>
+				</section>	
+				<section>
+					<h2>Houston, we have a problem.</h2>
+					<img src="img/houston-we-have-a-problem.png">
+						<p>which blew my %^&* mind. I need to scrap ticucumber and restart. Also the opalrb idea didn't work out.</p>
+						<small>credit: http://www.phrases.org.uk/images/houston-we-have-a-problem.jpg </small>
+				</section>		
+				<section>
+					<h2>Solution:</h2>
+						<p>keep the server bits, map the REST API and go node go</p>
+				</section>
+				<section>
+					<h2>current status...</h2>
+				</section>
+				<section>
+					<h2>a call for help.</h2>
+				</section>
+				<section>
+					<h2>Thank You</h2>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
